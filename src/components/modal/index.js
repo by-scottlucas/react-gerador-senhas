@@ -23,7 +23,7 @@ export function ModalPassword({ password, handleClose }) {
 
                 <Text style={styles.title}>Senha gerada</Text>
 
-                <Pressable style={styles.innerPassword} onLongPress={handleCopyPassword}>
+                <Pressable style={styles.boxPassword} onLongPress={handleCopyPassword}>
                     <Text style={styles.text}>
                         {password}
                     </Text>
@@ -49,31 +49,31 @@ export function ModalPassword({ password, handleClose }) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "rgba(24, 24, 24, 0.6)",
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: "rgba(24, 24, 24, 0.6)",
     },
     content: {
-        backgroundColor: "#fff",
-        width: "85%",
+        width: "80%",
+        borderRadius: 4,
         paddingTop: 24,
         paddingBottom: 24,
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: 4,
+        backgroundColor: "#fff",
     },
     title: {
+        color: "#000",
         fontSize: 20,
         fontWeight: "bold",
-        color: "#000",
         marginBottom: 24,
     },
-    innerPassword: {
-        backgroundColor: "#0e0e0e",
+    boxPassword: {
         width: "90%",
         padding: 14,
-        borderRadius: 4,
+        borderRadius: 2,
+        backgroundColor: "#0e0e0e",
     },
     text: {
         color: "#fff",
@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
         padding: 8,
     },
     buttonSave: {
-        borderRadius: 4,
-        backgroundColor: "#007FBF",
+        borderRadius: 2,
+        backgroundColor: "#3d9ae2",
     },
     buttonSaveText: {
         color: "#fff",

@@ -15,7 +15,7 @@ export function Routes() {
                 tabBarShowLabel: false,
                 headerShown: false, tabBarIcon: (focused, size, color) => {
                     if (focused) {
-                        return <Ionicons size={size} color={color} name="home" />
+                        return <Ionicons size={size} color={color} name="home" style={{ fontSize: 18 }} />
                     }
 
                     return <Ionicons size={size} color={color} name="home-outline" />
@@ -26,7 +26,7 @@ export function Routes() {
                 tabBarShowLabel: false,
                 headerShown: false, tabBarIcon: (focused, size, color) => {
                     if (focused) {
-                        return <Ionicons size={size} color={color} name="lock-closed" />
+                        return <Ionicons size={size} color={color} name="lock-closed" style={{ fontSize: 18 }} />
                     }
 
                     return <Ionicons size={size} color={color} name="lock-closed-outline" />

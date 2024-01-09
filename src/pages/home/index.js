@@ -1,7 +1,7 @@
 import Slider from "@react-native-community/slider";
 import React, { useState } from "react";
 import { Image, Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { ModalPassword } from "../../components/Modal";
+import { ModalPassword } from "../../components/modal";
 
 let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
@@ -25,7 +25,7 @@ export function Home() {
 
             <Image source={require('../../../assets/logo.png')} style={styles.logoIcon} />
 
-            <Text style={styles.logo}>Gerador de Senhas</Text>
+            <Text style={styles.logoText}>Gerador de Senhas</Text>
 
             <Text style={styles.title}>{size} Caracteres</Text>
 
@@ -34,9 +34,9 @@ export function Home() {
                     style={{ height: 50 }}
                     minimumValue={6}
                     maximumValue={20}
-                    maximumTrackTintColor="#ff0000"
-                    minimumTrackTintColor="#000"
-                    thumbTintColor="#392de9"
+                    maximumTrackTintColor="#13678A"
+                    minimumTrackTintColor="#3d9ae2"
+                    thumbTintColor="#000"
                     value={size}
                     onValueChange={(value) => setSize(Math.round(value))}
                 />
@@ -62,14 +62,14 @@ const styles = StyleSheet.create({
         backgroundColor: "#f3f3ff",
     },
     logoIcon: {
-        width: 105,
-        height: 162,
+        width: 96,
+        height: 150,
         marginBottom: 20
     },
-    logo: {
+    logoText: {
         fontWeight: "bold",
         fontSize: 30,
-        marginBottom: 60,
+        marginBottom: 20,
     },
     area: {
         marginTop: 14,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         height: 50,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: '#007FBF',
+        backgroundColor: '#3d9ae2',
         marginBottom: 18,
     },
     buttonText: {
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
 
     },
     title: {
-        fontSize: 30,
+        fontSize: 20,
         fontWeight: "bold",
     }
 });

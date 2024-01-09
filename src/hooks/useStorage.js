@@ -1,8 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// Corrected function definition syntax
 export default function useStorage() {
-  
+
   // Buscar itens salvos
   const getItem = async (key) => {
     try {
@@ -34,7 +33,6 @@ export default function useStorage() {
         return password !== item;
       });
 
-      // Corrected typo: JSOn.stringify to JSON.stringify
       await AsyncStorage.setItem(key, JSON.stringify(myPasswords));
       return myPasswords;
     } catch (error) {

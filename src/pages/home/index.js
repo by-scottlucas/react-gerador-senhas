@@ -1,7 +1,7 @@
 import Slider from "@react-native-community/slider";
-import { useState } from "react";
-import { Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { ModalPassword } from "../../components/modal";
+import React, { useState } from "react";
+import { Image, Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ModalPassword } from "../../components/Modal";
 
 let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
@@ -23,12 +23,23 @@ export function Home() {
     return (
         <View style={styles.container}>
 
-            <Text style={styles.logo}>Password Generator</Text>
+            <Image source={require('../../../assets/logo.png')} style={styles.logoIcon} />
+
+            <Text style={styles.logo}>Gerador de Senhas</Text>
 
             <Text style={styles.title}>{size} Caracteres</Text>
 
             <View style={styles.area}>
-                <Slider style={{ height: 50 }} minimumValue={6} maximumValue={20} maximumTrackTintColor="#ff0000" minimumTrackTintColor="#000" thumbTintColor="#392de9" value={size} onValueChange={(value) => setSize(value.toFixed(0))} />
+                <Slider
+                    style={{ height: 50 }}
+                    minimumValue={6}
+                    maximumValue={20}
+                    maximumTrackTintColor="#ff0000"
+                    minimumTrackTintColor="#000"
+                    thumbTintColor="#392de9"
+                    value={size}
+                    onValueChange={(value) => setSize(Math.round(value))}
+                />
             </View>
 
             <TouchableOpacity style={styles.button} onPress={generatePassword}>
@@ -50,6 +61,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#f3f3ff",
     },
+    logoIcon: {
+        width: 105,
+        height: 162,
+        marginBottom: 20
+    },
     logo: {
         fontWeight: "bold",
         fontSize: 30,
@@ -69,7 +85,7 @@ const styles = StyleSheet.create({
         height: 50,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: '#392de9',
+        backgroundColor: '#007FBF',
         marginBottom: 18,
     },
     buttonText: {

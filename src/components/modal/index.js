@@ -1,5 +1,5 @@
 import * as Clipboard from 'expo-clipboard';
-import { Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native-web";
+import { Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import useStorage from '../../hooks/useStorage';
 
 
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     },
     buttonSave: {
         borderRadius: 4,
-        backgroundColor: "#392de9",
+        backgroundColor: "#007FBF",
     },
     buttonSaveText: {
         color: "#fff",

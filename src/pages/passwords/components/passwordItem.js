@@ -1,11 +1,11 @@
 import React from 'react';
-import { Pressable, StyleSheet, Text } from "react-native-web";
+import { Pressable, StyleSheet, Text } from "react-native";
 
-export function PasswordItem(data, removePassword) {
+export function PasswordItem({ data, removePassword }) {
 
     return (
         <Pressable onLongPress={removePassword} style={styles.container}>
-            <Text>{data}</Text>
+            <Text style={styles.texto}>{data}</Text>
         </Pressable>
     );
 }
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
     },
-    text: {
+    texto: {
         color: "#fff"
     }
 })

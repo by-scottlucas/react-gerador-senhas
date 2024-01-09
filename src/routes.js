@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home } from "./pages/Home";
+import { Home } from "../src/pages/home";
 import { Passwords } from "./pages/passwords";
 
 import { Ionicons } from '@expo/vector-icons';
